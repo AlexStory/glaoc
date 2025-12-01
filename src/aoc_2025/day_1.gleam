@@ -59,7 +59,7 @@ fn dial_with_count(input: List(Rotation)) -> #(Int, Int) {
   list.fold(input, #(50, 0), fn(acc, rotation) {
     let #(value, zeroes) = acc
     let #(result, new_zeroes) = rotate_with_count(value, rotation, zeroes)
-    echo #(result, new_zeroes)
+    #(result, new_zeroes)
   })
 }
 
